@@ -106,13 +106,19 @@ public class P2 {
         System.out.println("l2 = " + Integer.toString(l2.toInteger()));
         System.out.println("l1 + l2 = " + Integer.toString(l1.toInteger() + l2.toInteger()));
 
+        l1 = new ListNode(new int[] {2,4,3}, false);
+        l2 = new ListNode(new int[] {5,6,4}, false);
+
         l1 = new ListNode(new int[]{9}, false);
         l2 = new ListNode(new int[]{1, 9, 9, 9, 9, 9, 9, 9, 9, 9}, false);
 
         l1 = new ListNode(new int[]{2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 9}, false);
         l2 = new ListNode(new int[]{5, 6, 4, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 2, 4, 3, 9, 9, 9, 9}, false);
 
-        addTwoNumbers2(l1, l2).print();
+        l1 = new ListNode(5);
+        l2 = new ListNode(5);
+
+        addTwoNumbers3(l1, l2).print();
     }
 
     @Deprecated
@@ -194,6 +200,38 @@ public class P2 {
             }
 
         }
+        return l3;
+    }
+
+    public static ListNode addTwoNumbers3(ListNode l1, ListNode l2) {
+        ListNode l3 = new ListNode(0);
+        int carry = 0;
+
+        ListNode l1Tail = l1, l2Tail = l2, l3Tail = l3;
+
+        while (l1Tail != null || l2Tail != null || carry > 0) {
+            l3Tail.val = (l1Tail != null ? l1Tail.val : 0) + (l2Tail != null ? l2Tail.val : 0) + carry;
+            carry = l3Tail.val / 10;
+            l3Tail.val %= 10;
+
+            if (l1Tail != null) {
+                l1Tail = l1Tail.next;
+            }
+
+            if (l2Tail != null) {
+                l2Tail = l2Tail.next;
+            }
+
+            if (l1Tail != null || l2Tail != null || carry > 0) {
+                l3Tail.next = new ListNode(0);
+                l3Tail = l3Tail.next;
+            }
+        }
+
+        if (carry > 0) {
+            l3Tail.next = new ListNode(carry);
+        }
+
         return l3;
     }
 }
