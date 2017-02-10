@@ -15,6 +15,8 @@
 
 ### Queue
 
+### String
+
 ## None-Linear Data Structure
 
 ### Hash
