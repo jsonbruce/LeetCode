@@ -3,6 +3,9 @@ package com.leetcode;
 import java.util.*;
 
 /**
+ * 1. Two Sum
+ * https://leetcode.com/problems/two-sum/
+ *
  * Created by max on 17-2-7.
  */
 public class P1 {

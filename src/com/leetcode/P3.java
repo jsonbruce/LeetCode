@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 /**
+ * 3. Longest Substring Without Repeating Characters
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/
+ *
  * Created by max on 17-2-10.
  */
 public class P3 {
