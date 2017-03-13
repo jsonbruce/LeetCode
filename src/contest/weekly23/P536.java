@@ -5,6 +5,9 @@ import sun.reflect.generics.tree.Tree;
 import java.util.*;
 
 /**
+ * 536. Construct Binary Tree from String My SubmissionsBack To Contest
+ * https://leetcode.com/contest/leetcode-weekly-contest-23/problems/construct-binary-tree-from-string/
+ *
  * Created by max on 17-3-12.
  */
 public class P536 {
