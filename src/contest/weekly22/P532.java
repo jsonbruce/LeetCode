@@ -10,7 +10,7 @@ import java.util.*;
  *
  * Created by max on 17-3-5.
  */
-public class p532 {
+public class P532 {
 
     public static void main(String[] args) {
         int[] nums = new int[] {3,1,4,1,5};
